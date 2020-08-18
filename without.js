@@ -16,7 +16,7 @@ const assertArraysEqual = function(eqArrays) {
 };
 
 const without = function(source, itemsToRemove) {
-  sourceCopy = source.slice();
+  let sourceCopy = source.slice();
   for (let item of itemsToRemove) {
     if (sourceCopy.includes(item)) {
       let pos = sourceCopy.indexOf(item);
