@@ -11,11 +11,11 @@ const eqArrays = function(array1, array2) {
   return true;
 };
 
-const assertArraysEqual = function(eqArrays) {
-  if (eqArrays) {
-    console.log('🟢🟢🟢 Assertion Passed: Arrays Equal');
+const assertArraysEqual = function(actual, expected) {
+  if (eqArrays(actual, expected) === true) {
+    console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
   } else {
-    console.log('🔴🔴🔴 Assertion Failed: Arrays Not Equal');
+    console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
 
@@ -40,9 +40,9 @@ const letterPositions = function(sentence) {
 };
 
 let result1 = letterPositions("hello");
-assertArraysEqual(eqArrays(letterPositions("hello").h, [0])); // pass
-assertArraysEqual(eqArrays(result1['h'], [0])); // pass
-assertArraysEqual(eqArrays(result1['h'], [1])); // fail
-assertArraysEqual(eqArrays(result1['e'], [1])); // pass
-assertArraysEqual(eqArrays(result1['l'], [2, 3])); // pass
-assertArraysEqual(eqArrays(result1['o'], [4])); // pass
+assertArraysEqual(letterPositions("hello").h, [0]); // pass
+assertArraysEqual(result1['h'], [0]); // pass
+assertArraysEqual(result1['h'], [1]); // fail
+assertArraysEqual(result1['e'], [1]); // pass
+assertArraysEqual(result1['l'], [2, 3]); // pass
+assertArraysEqual(result1['o'], [4]); // pass
