@@ -42,3 +42,5 @@ let result = without(words, ["lighthouse", 'hello'])
 assertArraysEqual(words, ["hello", "world", "lighthouse"]); // pass
 assertArraysEqual(result, words) // fail
 
+module.exports = without;
+

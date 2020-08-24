@@ -48,3 +48,5 @@ const results3 = map(words, word => word.toUpperCase());
 assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']); // pass
 assertArraysEqual(results2, [6 ,7 ,2 ,5 ,3]); // pass
 assertArraysEqual(results3, words); // fail
+
+module.exports = map;
