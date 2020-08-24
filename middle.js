@@ -1,4 +1,7 @@
 const middle = function(array) {
+  if (array.length === 0) {
+    return undefined
+  };
   let midArray = [];
   if (array.length > 2) {
     if (array.length % 2 === 0) {
